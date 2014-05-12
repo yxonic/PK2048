@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Register</title>
+    <link href="style/main.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h1 class="title">PK2048</h1>
+      </div>
+      <hr>
+      <form name="RegForm" method="post" action="register.php">
+        <p>
+          <label for="username" class="label">用户名：</label>
+          <input id="username" name="username" type="text" class="input" />
+          <span>（字母、数字及_，3-15位）</span>
+        </p>
+        <p>
+          <label for="password" class="label">密 码：</label>
+          <input id="password" name="password" type="password" class="input" />
+          <span>（必填，不得少于6位）</span>
+        </p>
+        <p>
+          <label for="repass" class="label">重复密码：</label>
+          <input id="repass" name="repass" type="password" class="input" />
+        </p>
+        <p>
+          <label for="email" class="label">电子邮箱：</label>
+          <input id="email" name="email" type="text" class="input" />
+          <span>（必填，请使用科大邮箱）</span>
+        </p>
+        <p>
+          <input type="submit" name="submit" value=" Submit " class="left" />
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
