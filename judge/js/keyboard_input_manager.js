@@ -60,7 +60,7 @@ KeyboardInputManager.prototype.listen = function () {
                 event.preventDefault();
                 lock = 1;
                 self.emit("move", mapped);
-                sleep(1500, function () {
+                sleep(800, function () {
                     lock = 0;
                     self.emit("auto");
                 });
