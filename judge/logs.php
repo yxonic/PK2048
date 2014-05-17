@@ -26,7 +26,7 @@
        $userid = $_SESSION['userid'];
        $username = $_SESSION['username'];
        ?>
-    <div class="container">
+    <div class="container" style="width:800px">
       <div class="heading">
         <h1 class="title">Logs</h1>
       </div>
@@ -46,12 +46,12 @@
                $usr2 = mysql_fetch_array(mysql_query("SELECT username,email FROM user WHERE uid='$u2id' LIMIT 1"));
                echo '<tr>';
                if ($u1id !== $userid)
-                   echo '<td> <a href="mailto://' . $usr1['email'] . '">' . $usr1['username'] . '</a> </td>';
+                   echo '<td> <a href="mailto:' . $usr1['email'] . '">' . $usr1['username'] . '</a> </td>';
                else
                    echo '<td> ' . $username . ' </td>';
                echo '<td> ' . $bot1['botname'] . ' </td>';
                if ($u2id !== $userid)
-                   echo '<td> <a href="mailto://' . $usr1['email'] . '">' . $usr1['username'] . '</a> </td>';
+                   echo '<td> <a href="mailto:' . $usr1['email'] . '">' . $usr1['username'] . '</a> </td>';
                else
                    echo '<td> ' . $username . ' </td>';
                echo '<td> ' . $bot2['botname'] . ' </td>';
@@ -60,6 +60,8 @@
            }
            echo '</table>';
          ?>
+        <hr>
+        <p><a href="board.php">Back to board</a></p>
       </div>
     </div>
   </body>

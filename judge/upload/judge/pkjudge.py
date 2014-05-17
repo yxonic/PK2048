@@ -4,13 +4,13 @@
 import random
 import time
 from aigame import Player
-
+from aigame import Logger
 
 # For error handling.
 class GameError(Exception):
     def __init__(self, msg):
         self.__message = msg
-    def __str__():
+    def __str__(self):
         return self.__message
 
 # Store game state. Player independent.
@@ -203,7 +203,10 @@ class Game:
                     self.__players[0].check_memory()
                     self.__players[1].check_memory()
                     text = self.__players[cur_p].query(put)
-                    msg = [int(x) for x in text.split(' ')]
+                    try:
+                        msg = [int(x) for x in text.split(' ')]
+                    except ValueError:
+                        raise GameError('Illegal output!')
                     if len(msg) != 3:
                         raise GameError('Illegal output!')
                     if msg[0] != 0:

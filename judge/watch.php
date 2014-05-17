@@ -30,7 +30,7 @@
       <div class="heading">
         <h1 class="title">View logs</h1>
       </div>
-      <div class="game-explanation" width="800px">
+      <div class="game-explanation">
         <hr>
         <?php
            $log = $_REQUEST['log'];
@@ -41,6 +41,7 @@
            fclose($file);
          ?>
       </div>
+      <p><a href="logs.php">Back to log list</a></p>
     </div>
   </body>
 </html>

@@ -71,11 +71,11 @@ else:
 
 state = subprocess.call([bot1_C, '-o', bot1_bin, bot1_src])
 if state != 0:
-    print('Compilation failed!')
+    print('Compilation failed: ', bot1)
     exit(3)
 state = subprocess.call([bot2_C, '-o', bot2_bin, bot2_src])
 if state != 0:
-    print('Compilation failed!')
+    print('Compilation failed: ', bot2)
     exit(4)
 
 p1 = PKPlayer(bot1, bot1_bin)
